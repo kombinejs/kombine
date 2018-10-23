@@ -1,7 +1,7 @@
 # kombine
 
 ## What is kombine?
-**kombine** is a tool for combining multiple html, css, js files into one single js file.
+**kombine** is a tool for developer to separately write each part of a web page then combining them into one single js file (kinda like single page application).
 
 ## Basic tutorial
 1. Create a project
