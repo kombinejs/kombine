@@ -4,13 +4,13 @@
 **kombine** is a tool for developer to separately write each part of a web page then combining them into one single js file (kinda like single page application).
 
 ## Basic tutorial
-1. Create a project
+### 1. Create a project
 ```
 npm init
 npm install https://github.com/kombinejs/kombine.git --save
 ```
 
-2. Create some files
+### 2. Create some files
  ```
  project root
  ├── pages
@@ -60,13 +60,13 @@ npm install https://github.com/kombinejs/kombine.git --save
 const kombine = require('kombine');
 kombine(`${__dirname}/pages/home`);
  ```
-3. Run build.js
+### 3. Run build.js
  ```
  node ./build.js
  ```
  you should see **main.bundle.js** is generated.
  
-4. Create an index.html to show the result
+### 4. Create an index.html to show the result
 ```
 <!DOCTYPE html>
 <html>
