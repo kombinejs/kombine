@@ -11,7 +11,7 @@
     "url": "git+https://github.com/kombinejs/kombine.git"
   },
   "author": "Ken Chau",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kombinejs/kombine/issues"
   },
