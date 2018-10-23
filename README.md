@@ -50,7 +50,7 @@ npm install https://github.com/kombinejs/kombine.git --save
  
  //part1.js
  
- document.getElementById('part1').innerHtml += '<br> text from script!!!';
+ document.getElementById('part1').innerHTML += '<br> text from script!!!';
  ```
    ```
  //build.js
