@@ -15,36 +15,38 @@ npm install https://github.com/kombinejs/kombine.git --save
  project root
  ├── pages
  │   ├── home
- |   │   ├── main.html
- |   │   ├── main.js
+ |   │   ├── main.html          #required, it's the entry point
+ |   │   ├── main.js            #required
  |   │   ├── part1.html
  |   │   ├── part1.js
  |   │   ├── index.html
  ├── build.js
  ```
- ```
+ ```html
  //main.html
  
  <view>
-  <h1>Hello World</h1>
-  <view src="./part1.html"></view>
+   <h1>Hello World</h1>
+   <view src="./part1.html"></view>
  </view>
+
  <style>
-  h1{
-    color: #555;
-  }
+   h1{
+     color: #555;
+   }
  </style>
  ```
-  ```
+ ```html
  //part1.html
  
  <view>
-  <p id="part1" class="part1">part 1</p>
+   <p id="part1" class="part1">part 1</p>
  </view>
+
  <style>
-  .part1{
-    color: #999;
-  }
+   .part1{
+     color: #999;
+   }
  </style>
  
  
@@ -52,7 +54,7 @@ npm install https://github.com/kombinejs/kombine.git --save
  
  document.getElementById('part1').innerHTML += '<br> text from script!!!';
  ```
-   ```
+ ```js
  //build.js
  
 const kombine = require('kombine');
