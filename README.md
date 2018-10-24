@@ -9,7 +9,7 @@
 ### 1. Create a project
 ```
 npm init
-npm install https://github.com/kombinejs/kombine.git --save
+npm install kombine --save
 ```
 
 ### 2. Create some files
