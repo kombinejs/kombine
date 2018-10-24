@@ -1,8 +1,10 @@
 # kombine
 
+ 
 ## What is kombine?
 **kombine** is a tool for developer to separately write each part of a web page then combining them into one single js file (kinda like single page application).
 
+ 
 ## Basic tutorial
 ### 1. Create a project
 ```
@@ -76,4 +78,62 @@ kombine(`${__dirname}/pages/home`);
     <script src="./main.bundle.js"></script>
 </body>
 </html>
+```
+
+ 
+## How to use
+**kombine** will deal with two type of files, html and js, where one is represent the view and the other is the script. You must name the script file exactly the same as the html if you want it to automatically add to the output file. For example, if you have a file name header.html, you should have a header.js in the same directory if you need a script to manipulate the view.
+
+### .html
+Here is an example of a html file. 
+```html
+<view>
+  <view src="./header.html"></view>        <!-- include header.html -->
+  <div class="content">
+    ...
+  </div>
+  <view src="./footer.html"></view>        <!-- include footer.html -->
+</view>
+
+<style>                                    <!-- style of this view -->
+  .content{
+   ...
+  }
+</style>
+
+<style src="./myStyle.css"></style>        <!-- you can also include other css file or you may want to separate the html and css -->
+```
+
+view is not reusable in the same page, which means you cannot include the same html file either in the main view or the children view. If you do so, there will be an error alert when you kombine them. 
+
+If you want to reuse some layout, you can use template instead of view, here is an example
+```html
+//main.html
+<view>
+  ...
+</view>
+
+<template src="./myTemplate.html"><template>
+
+<style>
+  ...
+</style>
+ 
+ 
+//myTemplate.html
+<template>
+  <p>hello, I am template.</p>
+</template>
+ 
+<style>
+  ...
+</style>
+
+```
+then you can use script to add the template to the DOM.
+
+
+### .js
+```js
+const myModule = require('any-module');             // you can require module as node.js, this will handle by browserify
 ```
